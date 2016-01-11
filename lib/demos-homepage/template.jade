@@ -39,7 +39,10 @@
                   span
                 .topic-tag.hide=topic.tag._id
                 .summary.hidden-xs
-                  !=topic.summary
+                  - var clauses = topic.clauses || []
+                  for clause in clauses
+                    if (!clause.empty)
+                      !=clause.markup
                 .topic-keywords.hide
                   =topic.keywords.join(' ')
               .participants
