@@ -1,6 +1,6 @@
 - var formatNumber = function (v) { return (v < 100 ? v : '99+') + ' '; };
 
-.sidebar-filter
+.sidebar-filter(class=config.demosLayout ? 'hide' : '')
   .sidebar-filter-status.btn-group.btn-group-justified
     a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
       = formatNumber(openCount) + t('sidebar.open')
