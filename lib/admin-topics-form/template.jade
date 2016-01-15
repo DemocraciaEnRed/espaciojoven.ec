@@ -34,6 +34,14 @@
         .form-group
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
+        if config.demosLayout
+          .form-group
+            label=t('admin-topics-form.label.order')
+            .col-sm-10
+              input.form-control(type='text', id="order", name='order', tabindex=6, placeholder=t('admin-topics-form.label.order'), validate='numeric', value=topic.order)
+          .form-group
+            label=t('admin-topics-form.label.subtopic')
+            .subtopic-toggle
         .form-group
           label= t('admin-topics-form.label.votable')
           .votable-toggle
@@ -47,7 +55,7 @@
           label= t('admin-topics-form.label.summary')
           textarea.form-control(name='body', tabindex=7)= topic.body
         .form-group
-          label.col-sm-2.control-label= t('admin-topics-form.label.keywords')
+          label=t('admin-topics-form.label.keywords')
           .col-sm-10
             input.form-control(type='text', id="keywords", name='keywords', tabindex=13, placeholder=t('admin-topics-form.placeholder.keywords'), value=topic.keywords)
         .form-group.closingAt

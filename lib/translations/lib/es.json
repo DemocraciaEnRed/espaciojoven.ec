@@ -51,6 +51,8 @@
   "admin-topics-form.label.summary": "Contenido",
   "admin-topics-form.label.keywords": "Palabras clave",
   "admin-topics-form.placeholder.keywords": "Separadas por coma",
+  "admin-topics-form.label.order": "Orden",
+  "admin-topics-form.label.subtopic": "Subtema",
   "admin-topics-form.label.tag": "Comisión",
   "admin-topics-form.label.topicId": "Identificación oficial",
   "admin-topics-form.label.votable": "Votable",

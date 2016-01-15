@@ -3,12 +3,16 @@
 - classes.push(config.demosLayout && !item.parent ? 'parent' : '')
 
 if config.demosLayout && !item.parent
-  li
+  li.parent
     a(href=item.url, class=classes)
       span.title=item.mediaTitle
 
 li(data-id=item.id, class=active ? 'active' : '')
-  a(href=item.url class=voted ? 'voted' : '' class=config.demosLayout ? 'no-padding' : '')
+  - classes = []
+  - classes.push(voted ? 'voted': '')
+  - classes.push(config.demosLayout ? 'no-padding': '')
+  - classes.push(item.subtopic ? 'subtopic': '')
+  a(href=item.url class=classes)
     .item-tag
       img(src=tagImages[item.tag.image].url class=config.demosLayout ? 'hide' : '')
       svg(viewbox='0 0 126 144', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' class=config.demosLayout ? 'hide' : '').hexagon
