@@ -36,6 +36,14 @@
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
         if config.demosLayout
           .form-group
+            label.col-sm-2.control-label= t('admin-topics-form.label.fgcolor')
+            .col-sm-10
+              input.form-control(type='color', id="fgcolor", name='fgColor', tabindex=3, placeholder=t('admin-topics-form.label.fgcolor'), value=topic.styles ? topic.styles.fgColor : '')
+          .form-group
+            label.col-sm-2.control-label= t('admin-topics-form.label.bgcolor')
+            .col-sm-10
+              input.form-control(type='color', id="bgcolor", name='bgColor', tabindex=3, placeholder=t('admin-topics-form.label.bgcolor'), value=topic.styles ? topic.styles.bgColor : '')
+          .form-group
             label=t('admin-topics-form.label.order')
             .col-sm-10
               input.form-control(type='text', id="order", name='order', tabindex=6, placeholder=t('admin-topics-form.label.order'), validate='numeric', value=topic.order)

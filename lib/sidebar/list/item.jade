@@ -1,11 +1,11 @@
-- var voted = user.logged() && !!item.voted
+- var voted = user.logged() && !!item.voted && !config.demosLayout
 - var classes = []
 - classes.push(config.demosLayout && !item.parent ? 'parent' : '')
 
 if config.demosLayout && !item.parent
+  - var style = item.styles ? ('background:' + item.styles.bgColor + ';color:' + item.styles.fgColor) : ''
   li.parent
-    a(href=item.url, class=classes)
-      span.title=item.mediaTitle
+    a(href=item.url, class=classes style=style)=item.mediaTitle
 
 li(data-id=item.id, class=active ? 'active' : '')
   - classes = []
@@ -21,7 +21,7 @@ li(data-id=item.id, class=active ? 'active' : '')
           polygon#Polygon-1(fill='#{item.tag.color}', d='M63,0 L125.353829,36 L125.353829,108 L63,144 L0.646170928,108 L0.646170928,36 L63,0 Z M63,0', sketch:type='MSShapeGroup', points='63 0 125.353829 36 125.353829 108 63 144 0.646170928 108 0.646170928 36 ')
 
     .item-badges
-      if voted && config.demosLayout && !item.parent
+      if voted && !config.demosLayout && !item.parent
         include ./check
 
     span.title=config.demosLayout && !item.parent ? t('common.introduction') : item.mediaTitle
