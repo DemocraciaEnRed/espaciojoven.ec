@@ -11,7 +11,7 @@ li(data-id=item.id, class=active ? 'active' : '')
   - classes = []
   - classes.push(voted ? 'voted': '')
   - classes.push(config.demosLayout ? 'no-padding': '')
-  - classes.push(item.subtopic ? 'subtopic': '')
+  - classes.push(config.demosLayout && item.subtopic ? 'subtopic': '')
   a(href=item.url class=classes)
     .item-tag
       img(src=tagImages[item.tag.image].url class=config.demosLayout ? 'hide' : '')
