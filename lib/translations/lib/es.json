@@ -52,6 +52,7 @@
   "admin-topics-form.label.keywords": "Palabras clave",
   "admin-topics-form.placeholder.keywords": "Separadas por coma",
   "admin-topics-form.label.order": "Orden",
+  "admin-topics-form.label.parent": "Tema padre",
   "admin-topics-form.label.subtopic": "Subtema",
   "admin-topics-form.label.fgcolor": "Color de fuente",
   "admin-topics-form.label.bgcolor": "Color de fondo",
