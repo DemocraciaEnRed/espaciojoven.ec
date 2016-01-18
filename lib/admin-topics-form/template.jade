@@ -36,6 +36,18 @@
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
         if config.demosLayout
           .form-group
+            label=t('admin-topics-form.label.parent')
+            .col-sm-10
+              select.form-control(name='parent', tabindex=2)
+                option(value='')
+                - each parent in parents
+                  if parent.id != topic.id
+                    option(selected=topic.parent === parent.id, value=parent.id)=parent.mediaTitle
+          .form-group
+            label=t('admin-topics-form.label.cover')
+            .col-sm-10
+              input#cover.form-control(name='cover' type='text' validate='url' placeholder=t('admin-topics-form.placeholder.cover'))
+          .form-group
             label.col-sm-2.control-label= t('admin-topics-form.label.fgcolor')
             .col-sm-10
               input.form-control(type='color', id="fgcolor", name='fgColor', tabindex=3, placeholder=t('admin-topics-form.label.fgcolor'), value=topic.styles ? topic.styles.fgColor : '')
