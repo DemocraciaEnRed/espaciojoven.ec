@@ -32,6 +32,9 @@
           label= t('admin-topics-form.label.author')
           input.form-control(type='text', id="topicAuthor", name='topicAuthor', tabindex=4, placeholder='John Doe', value=topic.author, validate='author')
         .form-group
+          label= t('admin-topics-form.label.author-picture')
+          input.form-control(type='text', id="authorPictureUrl", name='authorPictureUrl', tabindex=5, placeholder=t('admin-topics-form.placeholder.author-picture'), value=topic.authorPictureUrl, validate='url')
+        .form-group
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
         if config.demosLayout

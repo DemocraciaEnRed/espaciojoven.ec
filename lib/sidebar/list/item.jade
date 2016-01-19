@@ -14,7 +14,8 @@ li(data-id=item.id, class=active ? 'active' : '')
   - classes.push(config.demosLayout && item.subtopic ? 'subtopic': '')
   a(href=item.url class=classes)
     .item-tag
-      img(src=tagImages[item.tag.image].url class=config.demosLayout ? 'hide' : '')
+      - var tagImageUrl = tagImages && tagImages[item.tag.image] ? tagImages[item.tag.image] : ''
+      img(src=tagImageUrl class=config.demosLayout ? 'hide' : '')
       svg(viewbox='0 0 126 144', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' class=config.demosLayout ? 'hide' : '').hexagon
         title Hexagon
         g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', sketch:type='MSPage')
