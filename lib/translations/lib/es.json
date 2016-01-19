@@ -44,6 +44,8 @@
   "admin-topics-form.delete-topic.confirmation.title": "Eliminar tema",
   "admin-topics-form.label.author": "Autor",
   "admin-topics-form.label.author-picture": "Foto del autor",
+  "admin-topics-form.label.party": "Bloque",
+  "admin-topics-form.label.partyUrl": "URL del Bloque",
   "admin-topics-form.placeholder.author-picture": "URL de la foto",
   "admin-topics-form.label.clause-truncation-text": "Texto para leer articulado",
   "admin-topics-form.label.closingAt": "Fecha de cierre",
