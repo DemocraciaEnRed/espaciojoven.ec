@@ -55,7 +55,7 @@
           .form-group
             label=t('admin-topics-form.label.cover')
             .col-sm-10
-              input#cover.form-control(name='cover' type='text' validate='url' placeholder=t('admin-topics-form.placeholder.cover'))
+              input#cover.form-control(name='cover' type='text' validate='url' placeholder=t('admin-topics-form.placeholder.cover') value=topic.cover)
           .form-group
             label.col-sm-2.control-label= t('admin-topics-form.label.fgcolor')
             .col-sm-10
