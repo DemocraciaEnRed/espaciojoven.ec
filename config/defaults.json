@@ -55,6 +55,7 @@
     "favicon",
     "organizationName",
     "organizationUrl",
+    "organizationEmail",
     "learnMoreUrl",
     "googleAnalyticsTrackingId",
     "commentsPerPage",
@@ -75,7 +76,8 @@
     "tweetText",
     "segmentKey",
     "spamLimit",
-    "availableLocales"
+    "availableLocales",
+    "demosLayout"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -132,5 +134,6 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false
+  "enforceLocale": false,
+  "demosLayout": false
 }

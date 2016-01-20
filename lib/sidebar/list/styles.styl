@@ -24,6 +24,19 @@
       position relative
       padding-left 70px
       min-height 60px
+      &.no-padding
+        padding-left 20px
+      &.parent
+        border-radius 5px
+        margin-top 20px
+        margin-left 2px
+        margin-right 2px
+        margin-bottom 20px
+        padding-left 15px
+        cursor default
+        text-transform uppercase
+      &.subtopic
+        padding-left 40px
 
     .item-tag
       position absolute
@@ -62,7 +75,7 @@
         left 5px
         top 2px
 
-    &:hover
+    &:not(.parent):hover
       background #fff
 
     span.title

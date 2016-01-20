@@ -32,8 +32,45 @@
           label= t('admin-topics-form.label.author')
           input.form-control(type='text', id="topicAuthor", name='topicAuthor', tabindex=4, placeholder='John Doe', value=topic.author, validate='author')
         .form-group
+          label= t('admin-topics-form.label.author-picture')
+          input.form-control(type='text', id="authorPictureUrl", name='authorPictureUrl', tabindex=5, placeholder=t('admin-topics-form.placeholder.author-picture'), value=topic.authorPictureUrl, validate='url')
+        .form-group
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
+        if config.demosLayout
+          .form-group
+            label= t('admin-topics-form.label.party')
+            input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('admin-topics-form.label.party'), value=topic.party)
+          .form-group
+            label= t('admin-topics-form.label.partyUrl')
+            input.form-control(type='text', id="partyUrl", name='partyUrl', tabindex=5, placeholder=t('admin-topics-form.label.partyUrl'), value=topic.partyUrl)
+          .form-group
+            label=t('admin-topics-form.label.parent')
+            .col-sm-10
+              select.form-control(name='parent', tabindex=2)
+                option(value='')
+                - each parent in parents
+                  if parent.id != topic.id
+                    option(selected=topic.parent === parent.id, value=parent.id)=parent.mediaTitle
+          .form-group
+            label=t('admin-topics-form.label.cover')
+            .col-sm-10
+              input#cover.form-control(name='cover' type='text' validate='url' placeholder=t('admin-topics-form.placeholder.cover') value=topic.cover)
+          .form-group
+            label.col-sm-2.control-label= t('admin-topics-form.label.fgcolor')
+            .col-sm-10
+              input.form-control(type='color', id="fgcolor", name='fgColor', tabindex=3, placeholder=t('admin-topics-form.label.fgcolor'), value=topic.styles ? topic.styles.fgColor : '')
+          .form-group
+            label.col-sm-2.control-label= t('admin-topics-form.label.bgcolor')
+            .col-sm-10
+              input.form-control(type='color', id="bgcolor", name='bgColor', tabindex=3, placeholder=t('admin-topics-form.label.bgcolor'), value=topic.styles ? topic.styles.bgColor : '')
+          .form-group
+            label=t('admin-topics-form.label.order')
+            .col-sm-10
+              input.form-control(type='text', id="order", name='order', tabindex=6, placeholder=t('admin-topics-form.label.order'), validate='numeric', value=topic.order)
+          .form-group
+            label=t('admin-topics-form.label.subtopic')
+            .subtopic-toggle
         .form-group
           label= t('admin-topics-form.label.votable')
           .votable-toggle
@@ -46,6 +83,10 @@
         .form-group
           label= t('admin-topics-form.label.summary')
           textarea.form-control(name='body', tabindex=7)= topic.body
+        .form-group
+          label=t('admin-topics-form.label.keywords')
+          .col-sm-10
+            input.form-control(type='text', id="keywords", name='keywords', tabindex=13, placeholder=t('admin-topics-form.placeholder.keywords'), value=topic.keywords)
         .form-group.closingAt
           label= t('admin-topics-form.label.closingAt')
           - var closingAt = ''

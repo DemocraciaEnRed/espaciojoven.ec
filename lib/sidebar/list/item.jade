@@ -1,20 +1,32 @@
-- var voted = user.logged() && !!item.voted
+- var voted = user.logged() && !!item.voted && !config.demosLayout
+- var classes = []
+- classes.push(config.demosLayout && !item.parent ? 'parent' : '')
+
+if config.demosLayout && !item.parent
+  - var style = item.styles ? ('background:' + item.styles.bgColor + ';color:' + item.styles.fgColor) : ''
+  li.parent
+    a(href=item.url, class=classes style=style)=item.mediaTitle
 
 li(data-id=item.id, class=active ? 'active' : '')
-  a(href=item.url, class=voted ? 'voted' : '')
+  - classes = []
+  - classes.push(voted ? 'voted': '')
+  - classes.push(config.demosLayout ? 'no-padding': '')
+  - classes.push(config.demosLayout && item.subtopic ? 'subtopic': '')
+  a(href=item.url class=classes)
     .item-tag
-      img(src=tagImages[item.tag.image].url)
-      svg(viewbox='0 0 126 144', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:sketch='http://www.bohemiancoding.com/sketch/ns').hexagon
+      - var tagImageUrl = tagImages && tagImages[item.tag.image] ? tagImages[item.tag.image] : ''
+      img(src=tagImageUrl class=config.demosLayout ? 'hide' : '')
+      svg(viewbox='0 0 126 144', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' class=config.demosLayout ? 'hide' : '').hexagon
         title Hexagon
         g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', sketch:type='MSPage')
           polygon#Polygon-1(fill='#{item.tag.color}', d='M63,0 L125.353829,36 L125.353829,108 L63,144 L0.646170928,108 L0.646170928,36 L63,0 Z M63,0', sketch:type='MSShapeGroup', points='63 0 125.353829 36 125.353829 108 63 144 0.646170928 108 0.646170928 36 ')
 
     .item-badges
-      if voted
+      if voted && !config.demosLayout
         include ./check
 
-    span.title= item.mediaTitle
-    span.created-by
+    span.title=config.demosLayout && !item.parent ? t('common.introduction') : item.mediaTitle
+    span.created-by(class=config.demosLayout ? 'hide' : '')
       if item.participants.length > 0
         - var cardinality = 1 === item.participants.length ? 'singular' : 'plural'
         = item.participants.length + ' ' + t('proposal-article.participant.' + cardinality)
