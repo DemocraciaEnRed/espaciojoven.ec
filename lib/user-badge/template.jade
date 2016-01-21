@@ -1,7 +1,8 @@
 .user-wrapper
-  .notifications-badge.pull-left.hidden-xs
-    a.btn.notifications(href='/notifications')
-      span.icon-bell.bell
+  if (!config.demosLayout)
+    .notifications-badge.pull-left.hidden-xs
+      a.btn.notifications(href='/notifications')
+        span.icon-bell.bell
   .user-badge.pull-right
     a.btn.profile
       img(src=user.profilePicture())
