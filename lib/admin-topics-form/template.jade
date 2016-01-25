@@ -40,7 +40,7 @@
         if config.demosLayout
           .form-group.summary
             label= t('admin-topics-form.label.summary')
-            textarea.form-control(type='text', id="summary", name='summary', tabindex=5, placeholder=t('admin-topics-form.label.summary'), value=topic.summary validate='max-length:200')
+            textarea.form-control(type='text', id="summary", name='summary', tabindex=5, placeholder=t('admin-topics-form.label.summary'), value=topic.summary validate='max-length:230')
           .form-group
             label= t('admin-topics-form.label.party')
             input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('admin-topics-form.label.party'), value=topic.party)
