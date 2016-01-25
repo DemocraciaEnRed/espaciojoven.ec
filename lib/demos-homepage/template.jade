@@ -1,64 +1,85 @@
-#landing
-  .container-fluid
-    .row
-      .col-md-12.card
-        .row.list
-          for topic in topics
-            .col-md-4
-              .well.topic
-                if (topic.closed)
-                  .corner-ribbon.top-left=t('admin-topics.list.close.past')
-                a(href='/topic/#{topic.id}').topic-title-link.text-center
-                  h2.topic-title(style=topic.styles ? 'background-color:#{topic.styles.bgColor};color:#{topic.styles.fgColor}' : '')=topic.mediaTitle
-                .topic-closing-date.hide=topic.closingAt
-                .author-wrapper
-                  .author
-                    if (topic.authorPictureUrl)
-                      a(href=topic.authorUrl ? topic.authorUrl : '#')
-                        img(src='#{topic.authorPictureUrl}')
-                    p
-                      if (topic.author)
-                        =t('landing.author') + ': '
-                        if (topic.authorUrl)
-                          a.author-link.topic-author(href=topic.authorUrl target='_blank')=topic.author
-                            if (topic.authorHasTwitter)
-                              - var tweet = t('topic.tweet.to-author', { author: topic.twitterHandler })
-                              - tweet = '%23YoVoto ' + encodeURI(tweet)
-                              - var url = 'http://twitter.com/share?text=' + tweet
-                              a(target="_blank" href=url): i.flaticon.social.twitter
-                        else
-                          span.topic-author=topic.author
-                      if (topic.party)
-                        p
-                          =t('landing.party') + ': '
-                          if (topic.partyUrl)
-                            a.party-name(href=topic.partyUrl target='_blank')=topic.party
-                          else
-                            span.party-name=topic.party
-                .pic(style='background-image:url(#{topic.cover})')
-                  span
-                .topic-tag.hide=topic.tag._id
-                .summary.hidden-xs
-                  - var clauses = topic.clauses || []
-                  for clause in clauses
-                    if (!clause.empty)
-                      !=clause.markup
-                .topic-keywords.hide
-                  =topic.keywords.join(' ')
-              .participants
-                - if (topic.participants.length)
-                  span=topic.participants.length
-                  span &nbsp; ciudadanos participando
-                - else
-                  span Sé el primero en participar
-              a(href='/topic/#{topic.id}').btn.btn-primary.btn-block.discuss=t('landing.discuss')
+#demos-homepage
+  section.section-hero-intro
 
-    footer.footer-container
-      .footer
-        a(href="http://democraciaenred.org", target="_blank")
-          img(src="https://cldup.com/vtCrQZ6Bzx.svg", title="Logo DemocracyOS")
-      .footer.tos
-        small: a(href='/help/terms-of-service')= t('header.tos')
-      .footer
-        p.text-center
-          small ¿Dudas, sugerencias? escribinos a <a href="mailto:#{config.organizationEmail}">#{config.organizationEmail}</a>
+  .container
+    .block-general-projecto
+      .row
+        for topic in topics
+          .col-sm-6.col-md-4
+            .block-card-projecto
+              figure.img-projecto
+                a(href='/topic/#{topic.id}'): img.img-responsive(src=topic.cover)
+              .block-card-info
+                time=topic.closingAt
+                .keywords
+                  for keyword in topic.keywords
+                    span.keyword='#' + keyword + '  '
+                a(href='/topic/#{topic.id}'): h3=topic.mediaTitle
+                .summary=topic.summary
+              a.btn.btn-action(href="#")=t('landing.discuss')
+
+
+  //- 
+  //- .container-fluid
+  //-   .row
+  //-     .col-md-12.card
+  //-       .row.list
+  //-         for topic in topics
+  //-           .col-md-4
+  //-             .well.topic
+  //-               if (topic.closed)
+  //-                 .corner-ribbon.top-left=t('admin-topics.list.close.past')
+  //-               a(href='/topic/#{topic.id}').topic-title-link.text-center
+  //-                 h2.topic-title(style=topic.styles ? 'background-color:#{topic.styles.bgColor};color:#{topic.styles.fgColor}' : '')=topic.mediaTitle
+  //-               .topic-closing-date.hide=topic.closingAt
+  //-               .author-wrapper
+  //-                 .author
+  //-                   if (topic.authorPictureUrl)
+  //-                     a(href=topic.authorUrl ? topic.authorUrl : '#')
+  //-                       img(src='#{topic.authorPictureUrl}')
+  //-                   p
+  //-                     if (topic.author)
+  //-                       =t('landing.author') + ': '
+  //-                       if (topic.authorUrl)
+  //-                         a.author-link.topic-author(href=topic.authorUrl target='_blank')=topic.author
+  //-                           if (topic.authorHasTwitter)
+  //-                             - var tweet = t('topic.tweet.to-author', { author: topic.twitterHandler })
+  //-                             - tweet = '%23YoVoto ' + encodeURI(tweet)
+  //-                             - var url = 'http://twitter.com/share?text=' + tweet
+  //-                             a(target="_blank" href=url): i.flaticon.social.twitter
+  //-                       else
+  //-                         span.topic-author=topic.author
+  //-                     if (topic.party)
+  //-                       p
+  //-                         =t('landing.party') + ': '
+  //-                         if (topic.partyUrl)
+  //-                           a.party-name(href=topic.partyUrl target='_blank')=topic.party
+  //-                         else
+  //-                           span.party-name=topic.party
+  //-               .pic(style='background-image:url(#{topic.cover})')
+  //-                 span
+  //-               .topic-tag.hide=topic.tag._id
+  //-               .summary.hidden-xs
+  //-                 - var clauses = topic.clauses || []
+  //-                 for clause in clauses
+  //-                   if (!clause.empty)
+  //-                     !=clause.markup
+  //-               .topic-keywords.hide
+  //-                 =topic.keywords.join(' ')
+  //-             .participants
+  //-               - if (topic.participants.length)
+  //-                 span=topic.participants.length
+  //-                 span &nbsp; ciudadanos participando
+  //-               - else
+  //-                 span Sé el primero en participar
+  //-             a(href='/topic/#{topic.id}').btn.btn-primary.btn-block.discuss=t('landing.discuss')
+
+  //-   footer.footer-container
+  //-     .footer
+  //-       a(href="http://democraciaenred.org", target="_blank")
+  //-         img(src="https://cldup.com/vtCrQZ6Bzx.svg", title="Logo DemocracyOS")
+  //-     .footer.tos
+  //-       small: a(href='/help/terms-of-service')= t('header.tos')
+  //-     .footer
+  //-       p.text-center
+  //-         small ¿Dudas, sugerencias? escribinos a <a href="mailto:#{config.organizationEmail}">#{config.organizationEmail}</a>
