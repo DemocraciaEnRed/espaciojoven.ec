@@ -38,9 +38,6 @@
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
         if config.demosLayout
-          .form-group.summary
-            label= t('admin-topics-form.label.summary')
-            textarea.form-control(type='text', id="summary", name='summary', tabindex=5, placeholder=t('admin-topics-form.label.summary'), value=topic.summary validate='max-length:230')
           .form-group
             label= t('admin-topics-form.label.party')
             input.form-control(type='text', id="party", name='party', tabindex=5, placeholder=t('admin-topics-form.label.party'), value=topic.party)

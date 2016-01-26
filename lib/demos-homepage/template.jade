@@ -15,8 +15,23 @@
                   for keyword in topic.keywords
                     span.keyword='#' + keyword + '  '
                 a(href='/topic/#{topic.id}'): h3=topic.mediaTitle
-                .summary=topic.summary
+                .summary.hidden-xs
+                  - var clauses = topic.clauses || []
+                  for clause in clauses
+                    if (!clause.empty)
+                      !=clause.markup
               a.btn.btn-action(href="#")=t('landing.discuss')
+
+    footer.footer-container
+      .footer
+        a(href="http://democraciaenred.org", target="_blank")
+          img(src="https://cldup.com/vtCrQZ6Bzx.svg", title="Logo DemocracyOS")
+      if config.termsOfService
+        .footer.tos
+          small: a(href='/help/terms-of-service')= t('header.tos')
+      .footer
+        p.text-center
+          small ¿Dudas, sugerencias? escribinos a <a href="mailto:#{config.organizationEmail}">#{config.organizationEmail}</a>
 
 
   //- 
