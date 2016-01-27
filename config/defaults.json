@@ -78,7 +78,8 @@
     "segmentKey",
     "spamLimit",
     "availableLocales",
-    "demosLayout"
+    "demosLayout",
+    "demosCoverUrl"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -136,5 +137,6 @@
     "zh_TW"
   ],
   "enforceLocale": false,
-  "demosLayout": false
+  "demosLayout": false,
+  "demosCoverUrl": "https://cldup.com/POm9q1Qn-d.jpg"
 }

@@ -18,5 +18,5 @@
             li.tag-image
               input.form-control(type='radio', name='image', tabindex=tabindex++, value=image.name, checked= tag.image === image.name, validate='any:image')
               .tag-image-fill
-                img(src=image.url)
+                i(class='icon-#{image.name}')
       .form-group: button.btn.btn-success.btn-block.btn-lg(tabindex=tabindex++)=t('admin-tags-form.button.submit')

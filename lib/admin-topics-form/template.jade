@@ -59,11 +59,11 @@
           .form-group
             label.col-sm-2.control-label= t('admin-topics-form.label.fgcolor')
             .col-sm-10
-              input.form-control(type='color', id="fgcolor", name='fgColor', tabindex=3, placeholder=t('admin-topics-form.label.fgcolor'), value=topic.styles ? topic.styles.fgColor : '')
+              input.form-control(type='text', id="fgcolor", name='fgColor', tabindex=3, placeholder=t('admin-topics-form.label.fgcolor'), value=topic.styles ? topic.styles.fgColor : '#fff')
           .form-group
             label.col-sm-2.control-label= t('admin-topics-form.label.bgcolor')
             .col-sm-10
-              input.form-control(type='color', id="bgcolor", name='bgColor', tabindex=3, placeholder=t('admin-topics-form.label.bgcolor'), value=topic.styles ? topic.styles.bgColor : '')
+              input.form-control(type='text', id="bgcolor", name='bgColor', tabindex=3, placeholder=t('admin-topics-form.label.bgcolor'), value=topic.styles ? topic.styles.bgColor : '#3F51B5')
           .form-group
             label=t('admin-topics-form.label.order')
             .col-sm-10
