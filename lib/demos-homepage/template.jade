@@ -13,8 +13,8 @@
   .container
     .block-espacio-projecto
       .row
-        for topic in topics
-          .col-sm-6.col-md-4
+        for topic, i in topics
+          .col-sm-6.col-md-4(class=i == 3 ? 'col-md-offset-2' : '')
             a(href='/topic/#{topic.id}')
               .block-card-projecto(style="background-color: #{topic.styles ? topic.styles.bgColor : ''};")
                 .block-card-info
