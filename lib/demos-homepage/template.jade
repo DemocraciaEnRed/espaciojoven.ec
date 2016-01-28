@@ -19,6 +19,15 @@
               .block-card-projecto(style="background-color: #{topic.styles ? topic.styles.bgColor : ''};")
                 .block-card-info
                   h3=topic.mediaTitle
+                  - var children = topic.children || []
+                  - var text = ''
+                  if children.length > 1
+                    - text = t('demos-homepage.topic.children.plural', { children: children.length })
+                  else if children.length == 1
+                    - text = t('demos-homepage.topic.children.singular')
+                  else
+                    - text = t('demos-homepage.topic.children.empty')
+                  p=text
                 .hexagon: i(class='icon-#{topic.tag.hash}')
     footer.footer-container
       .footer
