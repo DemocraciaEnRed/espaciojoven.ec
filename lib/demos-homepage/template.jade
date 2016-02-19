@@ -7,8 +7,8 @@
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .9)), url(${config.demosCoverUrl}) center center no-repeat;
     background-size: cover;`
     )
-    h2.text-center=config.organizationName
-    p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis, lectus et posuere fermentum, lacus dolor eleifend est, id fermentum nulla tellus eget nulla. Donec ac eros sapien. Praesent scelerisque nunc id sem feugiat rhoncus.
+    h2.text-center= t('demos-homepage.cover.title')
+    p.text-center!= t('demos-homepage.cover.description')
 
   .container
     .block-espacio-projecto
