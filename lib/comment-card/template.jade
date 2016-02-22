@@ -39,12 +39,13 @@ li.media.comment-item(class=classes)
         | .
         span.show-spam: a(href="#")= t('comment-card.show')
       .comment-actions
-        - if (repliesCounter || user.id)
-          - var title = repliesCounter + ' ' + (repliesCounter > 1 ? t('comments.replies') : t('comments.reply'))
-          a.comment-action.comment-reply.pull-right(href='#', title=title.toLowerCase())
-            span.reply-counter= repliesCounter > 0 ? repliesCounter : ''
-          a.comment-action.comment-reply.pull-right(href='#', title=t('comments.reply-to-argument'))
-            i.icon-reply
+        .comment-reply-action.pull-right
+          - if (repliesCounter || user.id)
+            - var title = repliesCounter + ' ' + (repliesCounter > 1 ? t('comments.replies') : t('comments.reply'))
+            a.comment-action.comment-reply(href='#', title=t('comments.reply-to-argument'))
+              i.icon-reply
+            a.comment-action.comment-reply(href='#', title=title.toLowerCase())
+              span.reply-counter= repliesCounter > 0 ? repliesCounter : ''
       span.error
       .oncomment.loginrequired
         =t('comments.sign-in-required-to-vote-comments')
