@@ -1,11 +1,11 @@
 - var voted = user.logged() && !!item.voted && !config.demosLayout
-- var classes = []
-- classes.push(config.demosLayout && !item.parent ? 'parent' : '')
 
 if config.demosLayout && !item.parent
-  - var style = item.styles ? ('background:' + item.styles.bgColor + ';color:' + item.styles.fgColor) : ''
-  li.parent
-    a(href=item.url, class=classes style=style)=item.mediaTitle
+  - var style = item.styles ? ('background-color:' + item.styles.bgColor + ';color:' + item.styles.fgColor) : ''
+  a(href=item.url)
+    li.parent(style=style)
+      i(class='icon-espaciojoven-#{item.tag.hash}')
+      span= item.mediaTitle
 
 li(data-id=item.id, class=active ? 'active' : '')
   - classes = []
