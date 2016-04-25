@@ -7,7 +7,7 @@ DemocracyOS es una plataforma online de [código abierto] (github.com/DemocracyO
 
 **Espacio Joven es para ser usada por personas!**
 Esperamos que te registres usando tu nombre. Las cuentas de “bots” u otros registros automáticos no están permitidas. Los/as usuarios/as son responsables de preservar la privacidad de su cuenta protegiendo el acceso a sus contraseñas. 
-Por favor, ante cualquier ingreso indebido en tu cuenta, no dejes de comunicarte con nosotros y escribinos a [espaciojoven@ciudadaniaydesarrollo.org] (espaciojoven@ciudadaniaydesarrollo.org) o [contacto@democracyciaenred.org] (contacto@democracyos.org).
+Por favor, ante cualquier ingreso indebido en tu cuenta, no dejes de comunicarte con nosotros y escribinos a [espaciojoven@ciudadaniaydesarrollo.org] (espaciojoven@ciudadaniaydesarrollo.org) o [contacto@democracyos.org] (contacto@democracyos.org).
 
 **No somos responsables por los contenidos generados por usuarios.**
 Los contenidos, opiniones o materiales ingresados en Espacio Joven por cada usuario/a son de su estricta responsabilidad. De todos modos, DemocracyOS garantiza la conservación de esta información y toma los recaudos necesarios para protegerla de accesos indebidos, pérdida o usos inadecuados.
