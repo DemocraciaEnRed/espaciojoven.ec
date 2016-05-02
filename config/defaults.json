@@ -15,6 +15,10 @@
   "allowEmailAliases": true,
   "facebookSignin": false,
   "publicEmails": false,
+  "letsencrypt": {
+    "key": "",
+    "token": ""
+  },
   "auth": {
     "basic": {
       "username": "",
