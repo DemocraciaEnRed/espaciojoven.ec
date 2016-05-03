@@ -1,8 +1,8 @@
 nav#sidebar
-  .filter-container(data-sidebar-filter)
-  .list-container(data-sidebar-list)
   if config.demosLayout
     .back-container.text-center
       a.btn.btn-primary(href='/')
         span.glyphicon.glyphicon-chevron-left
         =t('common.back')
+  .filter-container(data-sidebar-filter)
+  .list-container(data-sidebar-list)
