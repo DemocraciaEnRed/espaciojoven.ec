@@ -93,7 +93,22 @@ header.app-header
         font-size 20px
       &:hover
         text-decoration none
-
+        
+    .share-links
+      display inline
+      margin-top 15px
+      a
+        font-size 15px
+        padding 10px
+        margin-right 10px
+        border-radius border_radius
+        color #000
+        display inline-block
+        line-height 10px
+        -webkit-transition all 0.3s ease
+        &:hover
+          text-decoration none
+          color #c5c5c5
 vendors(prop, args, fn = null)
   val = fn == null ? args : fn + '(' + args + ')'
   -moz-{prop} val
