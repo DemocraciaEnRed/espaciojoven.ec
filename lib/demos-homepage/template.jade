@@ -10,12 +10,12 @@
       each slide, i in slides
         -var checked = (i === 0)?true:false
         input.control(type="radio", name="slide", id="Slide#{i}", checked=checked)
-        label(for="Slide#{i}", id="s#{i}" )
+        label(for="Slide#{i}", id="s#{i}")
       -var fullWidth = slides.length * 100
       -var slideWidth = 100 / slides.length
       .overflow-wrapper(style="width:#{fullWidth}%;")
         each slide in slides
-          a.slide(href="", style='background-image:url(' + slide.image + '); width:#{slideWidth}%;')
+          a.slide(href="#", style='background-image:url(' + slide.image + '); width:#{slideWidth}%;')
             .content
               h2=slide.title
               p=slide.description 
