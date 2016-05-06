@@ -6,17 +6,17 @@ Esperamos que te registres usando tu nombre (o un pseudónimo). Las cuentas de �
 
 Por favor, ante cualquier ingreso indebido en tu cuenta, no dejes de comunicarte con nosotros y escribinos a [contacto@democraciaenred.org](contacto@democraciaenred.org). 
 
-## No somos responsables por los contenidos generados por usuarios.
+## No somos responsables por los contenidos generados por usuarios
 Los contenidos, opiniones o materiales ingresados en DemocracyOS por cada usuario/a son de su estricta responsabilidad. De todos modos, DemocracyOS garantiza la conservación de esta información y toma los recaudos necesarios para protegerla de accesos indebidos, pérdida o usos inadecuados.
 
 Aún así, DemocracyOS y Espacio Joven se reservan el derecho de:
 rechazar o eliminar contenido que no cumpla cumpla con estos términos de uso o que, de alguna forma, sea cuestionable.
 quitar el acceso a quien no cumpliera, de alguna forma, con estos términos de uso.
  
-## No es un lugar de compra/venta de productos.
+## No es un lugar de compra/venta de productos
 Si bien es posible que entre las conversaciones y acciones que se desarrollen surjan algunas que tengan relación directa o indirecta con el desarrollo económico, DemocracyOS no es un espacio para realizar negocios y no se incluirán comentarios tendientes a la búsqueda de lucro económico. Por eso, pedimos que en ningún caso promuevas que las conversaciones se orienten hacia el lucro personal o el de terceros.
  
-## Política de privacidad según tipo de datos.
+## Política de privacidad según tipo de datos
 Nuestra política de privacidad describe qué datos almacenamos y los fines para los que llevamos a cabo su recogida. Además, se considera cómo utilizamos esos datos.
  
 **1 - Información proporcionada por los usuarios:** DemocracyOS requiere que sus usuarios se registren. En ese caso, se requerirá información personal, como nombre, dirección de correo electrónico, ciudad de residencia. El perfil de DemocracyOS que es visible públicamente puede incluir tu nombre y tu foto.
@@ -34,5 +34,5 @@ No compartimos información personal con empresas, organizaciones ni particulare
 - El usuario otorgue su consentimiento.
 - El eventual cumplimiento de un requisito previsto en la legislación o normativa aplicables o para atender cualquier requerimiento de un órgano administrativo o judicial.
 
-## Cambios.
+## Cambios
 Mantendremos siempre el principio de no vender información de carácter personal que se encuentre en la plataforma. De producirse otros cambios en nuestra política de uso, la informaremos en nuestra web oficial.
