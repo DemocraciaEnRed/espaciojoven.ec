@@ -15,7 +15,7 @@
       -var slideWidth = 100 / slides.length
       .overflow-wrapper(style="width:#{fullWidth}%;")
         each slide in slides
-          a.slide(href="#", style='background-image:url(' + slide.image + '); width:#{slideWidth}%;')
+          a.slide(href=((slide.link)?slide.link:'#'), style='background-image:url(' + slide.image + '); width:#{slideWidth}%;')
             .content
               h2=slide.title
               p=slide.description 
