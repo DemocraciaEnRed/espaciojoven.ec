@@ -7,6 +7,79 @@ font-secundary = 'Lato', sans-serif
   font-family font-primary
   padding-bottom 22px
   
+  #slider-wrapper
+    width 100%
+    height 420px
+    margin 50px auto
+    position relative
+    margin-bottom 0px
+    background rgba(0, 0, 0, 0.5)
+    overflow hidden
+      
+    label
+      position relative
+      padding 4px
+      margin 10px
+      background #505050
+      border-radius 20px
+      opacity 0.3
+      cursor pointer
+      z-index 999
+      
+    label:hover
+      opacity .50
+
+    .inner-wrapper 
+      width 100%
+      height 100%
+      position absolute
+      top 0
+      left 0
+      margin-bottom 0px
+      overflow hidden
+      display flex
+      justify-content center
+      align-items flex-end
+      
+    .control 
+      display none
+
+    input:checked + label
+      opacity 1
+
+    .overflow-wrapper 
+      height 100%
+      position absolute
+      top 0
+      left 0
+      overflow-y hidden
+      z-index 1
+      -webkit-transition all 0.3s ease-in-out
+      -moz-transition all 0.3s ease-in-out
+      -o-transition all 0.3s ease-in-out
+      transition all 0.3s ease-in-out
+      a
+        display inline-block
+        background-position center
+        background-size cover
+        .content
+          height 100%
+          width 100%
+          display flex
+          justify-content center
+          align-items center
+          flex-direction column
+          color #fff
+
+          h2
+            font-weight 600
+            font-size 2.3em
+            margin-bottom 1em
+
+          p
+            max-width 800px
+            margin 0 auto
+
   .support
     p
       text-align center
@@ -22,24 +95,6 @@ font-secundary = 'Lato', sans-serif
       .fcd
         width 100px
         margin-left 100px
-
-  .section-hero-intro
-    display block
-    padding 100px 0
-    color #fff
-    background-color #333
-    background-size cover
-    background-position center center
-
-    h2
-      font-weight 600
-      font-size 2.3em
-      max-width 580px
-      margin 0 auto 1em
-
-    p
-      max-width 800px
-      margin 0 auto
 
   .block-espacio-projecto
     padding 80px 0
