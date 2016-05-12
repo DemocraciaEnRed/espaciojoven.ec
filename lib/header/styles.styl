@@ -68,42 +68,42 @@ header.app-header
   img.logo-image
     height 78px
     display inline-block
+    
+  .right-side
+    height 100%
+    float right
+    .user-nav
+      height: inherit;
+      display: flex;
+      align-items: center;
+      .user
+        float right
 
-  .user-nav
-    position absolute
-    right 0
-    top 13px
-
-    .user
-      float right
-
-    .login
-      padding 6px 12px
-      display inline-block
-      margin-top 15px
-      line-height 1.8
-
-      i
-        display none
-        font-size 20px
-      &:hover
-        text-decoration none
-        
-    .share-links
-      display inline
-      margin-top 15px
-      a
-        font-size 15px
-        padding 10px
-        margin-right 10px
-        border-radius border_radius
-        color #000
+      .login
+        padding 6px 12px
         display inline-block
-        line-height 10px
-        -webkit-transition all 0.3s ease
+        line-height 1.8
+
+        i
+          display none
+          font-size 20px
         &:hover
           text-decoration none
-          color #c5c5c5
+          
+      .share-links
+        display inline
+        a
+          font-size 15px
+          padding 10px
+          border-radius border_radius
+          color #000
+          display inline-block
+          line-height 10px
+          -webkit-transition all 0.3s ease
+          &:hover
+            text-decoration none
+            color #c5c5c5
+
 vendors(prop, args, fn = null)
   val = fn == null ? args : fn + '(' + args + ')'
   -moz-{prop} val
@@ -120,3 +120,12 @@ vendors(prop, args, fn = null)
 
 .headroom--unpinned
   vendors(transform, -100%, translateY)
+
+@media only screen and (max-width 700px)
+  .right-side
+    position absolute
+    top 0
+    right 0
+    .user-nav
+      .share-links
+        display none!important
