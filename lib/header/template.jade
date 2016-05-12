@@ -13,21 +13,22 @@
         - if (mobileLogo)
           img(src=config.logoMobile).logo-image.visible-xs-inline-block
         //- span.logo-link=t('common.app-name')
-
-  .user-nav.btn-group
-    .user
-    - var color = config.headerFontColor;
-    - var style = color ? 'color: ' + color : '';
-    a(href='/signin', style=style).login.pull-right.anonymous-user
-      i.icon-signin
-      span= t('header.signin')
-    a(href='/signup', style=style).login.pull-right.anonymous-user
-      i.icon-user
-      span= t('header.signup')
-    - var target = config.homeLink ? {} : { 'target': '_blank'};
-    .share-links.pull-left
-      a(target="_blank", href="#").flaticon.social.facebook
-      a(target="_blank", href="#").flaticon.social.twitter
-      a(target="_blank", href="#").glyphicon.glyphicon-envelope
-    a.login.pull-left(href="/help/about-us", style=style)&attributes(target)
-      span= config.organizationName
+  
+  .right-side
+    .user-nav
+      - var color = config.headerFontColor;
+      - var style = color ? 'color: ' + color : '';
+      - var target = config.homeLink ? {} : { 'target': '_blank'};
+      .share-links
+        a(target="_blank", href="#").flaticon.social.facebook
+        a(target="_blank", href="#").flaticon.social.twitter
+        a(target="_blank", href="#").glyphicon.glyphicon-envelope
+      a.login(href="/help/about-us", style=style)&attributes(target)
+        span= config.organizationName
+      a(href='/signup', style=style).login.anonymous-user
+        i.icon-user
+        span= t('header.signup')
+      a(href='/signin', style=style).login.anonymous-user
+        i.icon-signin
+        span= t('header.signin')
+      .user
