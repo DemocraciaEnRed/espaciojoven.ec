@@ -18,17 +18,22 @@ font-secundary = 'Lato', sans-serif
       
     label
       position relative
-      padding 4px
-      margin 10px
-      background #505050
-      border-radius 20px
-      opacity 0.3
+      padding 10px
       cursor pointer
       z-index 999
       
-    label:hover
+    label:hover .circle
       opacity .50
+    
+    label .circle
+      background #ccc
+      border-radius 20px
+      padding 4px
+      opacity 0.3
 
+    input:checked + label .circle
+      opacity 1
+      
     .inner-wrapper 
       width 100%
       height 100%
@@ -44,8 +49,6 @@ font-secundary = 'Lato', sans-serif
     .control 
       display none
 
-    input:checked + label
-      opacity 1
 
     .overflow-wrapper 
       height 100%
@@ -62,23 +65,22 @@ font-secundary = 'Lato', sans-serif
         display inline-block
         background-position center
         background-size cover
+        height 100%
+        position relative
         .content
-          height 100%
           width 100%
-          display flex
-          justify-content center
-          align-items center
           flex-direction column
           color #fff
-
+          position absolute
+          bottom 0
+          padding 15px 10px 25px
+          background rgba(0,0,0,0.8)
           h2
             font-weight 600
-            font-size 2.3em
-            margin-bottom 1em
-
+            font-size 2em
+            margin 0
           p
-            max-width 800px
-            margin 0 auto
+            padding 0
 
   .support
     p

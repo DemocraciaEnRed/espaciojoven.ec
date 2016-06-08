@@ -11,6 +11,7 @@
         -var checked = (i === 0)?true:false
         input.control(type="radio", name="slide", id="Slide#{i}", checked=checked)
         label(for="Slide#{i}", id="s#{i}")
+          .circle
       -var fullWidth = slides.length * 100
       -var slideWidth = 100 / slides.length
       .overflow-wrapper(style="width:#{fullWidth}%;")
