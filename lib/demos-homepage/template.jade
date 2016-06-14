@@ -16,7 +16,7 @@
       -var slideWidth = 100 / slides.length
       .overflow-wrapper(style="width:#{fullWidth}%;")
         each slide in slides
-          a.slide(href=((slide.link)?slide.link:'#'), style='background-image:url(' + slide.image + '); width:#{slideWidth}%;')
+          a.slide(href=((slide.link)?slide.link:'#'), target='_blank', style='background-image:url(' + slide.image + '); width:#{slideWidth}%;')
             .content
               h2=slide.title
               p=slide.description 
@@ -42,7 +42,7 @@
     p Esta iniciativa cuenta con el apoyo de
     .logos
       img(src="/boot/suport_canada.jpg").canada
-      a(href="http://ciudadaniaydesarrollo.org")
+      a(href="http://ciudadaniaydesarrollo.org", target='_blank')
         img(src="/boot/suport_fcd.jpg").fcd
 
   .container

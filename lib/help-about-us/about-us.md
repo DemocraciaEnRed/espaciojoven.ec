@@ -27,4 +27,4 @@ Para inquietudes o comentarios puede contactarnos a través de [espaciojoven@ciu
 
 ## ¿Qué es DemocracyOS?
 
-DemocracyOS es una plataforma online de [código abierto](https://github.com/DemocracyOS) especialmente diseñada para informar, debatir y votar propuestas públicas facilitando la construcción de las democracias del siglo XXI.
+DemocracyOS es una plataforma online de <a href="https://github.com/DemocracyOS" target="_blank">código abierto</a> especialmente diseñada para informar, debatir y votar propuestas públicas facilitando la construcción de las democracias del siglo XXI.
