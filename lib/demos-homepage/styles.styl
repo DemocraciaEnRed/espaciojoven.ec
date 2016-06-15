@@ -77,7 +77,7 @@ font-secundary = 'Lato', sans-serif
           background rgba(0,0,0,0.8)
           h2
             font-weight 600
-            font-size 2em
+            font-size 24px
             margin 0
           p
             padding 0
@@ -90,13 +90,14 @@ font-secundary = 'Lato', sans-serif
       margin-bottom 30px
     .logos
       display flex
-      justify-content center
+      justify-content space-between
       align-items center
+      width 300px
+      margin 0 auto
       .canada
         width 150px
       .fcd
         width 100px
-        margin-left 100px
 
   .block-espacio-projecto
     padding 80px 0
@@ -199,3 +200,35 @@ font-secundary = 'Lato', sans-serif
 
     .tos
       margin-top 5px
+      
+    .share-links
+      display inline
+      a
+        font-size 15px
+        padding 10px
+        border-radius border_radius
+        color #000
+        display inline-block
+        line-height 10px
+        -webkit-transition all 0.3s ease
+        &:hover
+          text-decoration none
+          color #c5c5c5
+            
+@media screen and (max-width: 700px)
+  .block-card-projecto
+    margin 0 auto 30px!important
+  .block-espacio-projecto>a
+    width 100%
+  .block-espacio-projecto
+    flex-direction column
+  .logos
+    flex-direction column
+    height 160px
+    width 100%
+  footer
+    .share-links
+      display block!important
+  #demos-homepage 
+    #slider-wrapper
+      height 190px
