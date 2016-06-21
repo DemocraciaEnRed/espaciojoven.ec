@@ -45,6 +45,13 @@ header.app-header
     top 25px
     padding 10px 0
     display none
+
+    @media screen and (min-width: 701px)
+      display none !important
+
+    body.browser-page &
+      display block
+
     .bar-icon
       height 3px
       margin-bottom 5px
@@ -69,7 +76,7 @@ header.app-header
   img.logo-image
     height 78px
     display inline-block
-    
+
   .right-side
     height 100%
     float right
@@ -90,7 +97,7 @@ header.app-header
           font-size 20px
         &:hover
           text-decoration none
-          
+
       .share-links
         display inline
         a
@@ -130,6 +137,6 @@ vendors(prop, args, fn = null)
     .user-nav
       .share-links
         display none!important
-        
+
       a[href="/signin"] span
         display block!important
